@@ -5,7 +5,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
-data/samples/*.pdf
+data/samples/
 .venv
 .python-version
 EXPERIMENTS.md
