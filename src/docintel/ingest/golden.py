@@ -151,9 +151,7 @@ def main() -> None:
     arg_parser.add_argument(
         "pages", type=int, nargs="*", help="page numbers; omit to list pages with tables"
     )
-    arg_parser.add_argument(
-        "--check", action="store_true", help="validate the golden set and exit"
-    )
+    arg_parser.add_argument("--check", action="store_true", help="validate the golden set and exit")
     args = arg_parser.parse_args()
 
     if args.check:
