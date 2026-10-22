@@ -10,3 +10,6 @@ data/samples/
 .python-version
 EXPERIMENTS.md
 docs/
+data/cache/
+data/golden/pages/
+data/golden/pred/

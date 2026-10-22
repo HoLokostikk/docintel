@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from docintel.ingest.cache import parse_cached
 from docintel.ingest.models import Document
 from docintel.ingest.native import NativeParser
 
@@ -32,6 +33,7 @@ def main() -> None:
         description="Parse PDFs and print the extracted document structure."
     )
     arg_parser.add_argument("paths", nargs="+", type=Path, help="paths to PDF files")
+    arg_parser.add_argument("--refresh", action="store_true", help="ignore cached parse results")
     args = arg_parser.parse_args()
 
     native = NativeParser()
@@ -41,7 +43,7 @@ def main() -> None:
             print("  file not found")
             continue
         try:
-            doc = native.parse(path)
+            doc = parse_cached(native, path, refresh=args.refresh)
         except Exception as exc:
             print(f"  parse failed: {type(exc).__name__}: {exc}")
             continue
