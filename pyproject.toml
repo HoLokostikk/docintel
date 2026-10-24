@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "docling>=2.142.1",
     "pydantic>=2.14.1",
     "pymupdf>=2.0",
 ]
@@ -16,6 +17,7 @@ dependencies = [
 docintel = "docintel:main"
 docintel-parse = "docintel.ingest.cli:main"
 docintel-golden = "docintel.ingest.golden:main"
+docintel-eval = "docintel.eval.report:main"
 
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
@@ -50,5 +52,5 @@ testpaths = ["tests"]
 addopts = "-q --strict-markers --cov=docintel --cov-report=term-missing"
 
 [[tool.mypy.overrides]]
-module = ["fitz.*"]
+module = ["fitz.*", "docling.*", "docling_core.*"]
 ignore_missing_imports = true
