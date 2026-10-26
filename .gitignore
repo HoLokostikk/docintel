@@ -13,3 +13,4 @@ docs/
 data/cache/
 data/golden/pages/
 data/golden/pred/
+.env

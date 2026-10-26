@@ -9,8 +9,10 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "docling>=2.142.1",
+    "google-genai>=2.33.0",
     "pydantic>=2.14.1",
     "pymupdf>=2.0",
+    "python-dotenv>=1.2.4",
 ]
 
 [project.scripts]
