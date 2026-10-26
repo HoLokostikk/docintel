@@ -6,7 +6,9 @@ from pathlib import Path
 
 from docling.document_converter import DocumentConverter
 from docling_core.types.doc.base import BoundingBox
-from docling_core.types.doc.document import DoclingDocument, TableItem, TextItem
+from docling_core.types.doc.document import DoclingDocument
+from docling_core.types.doc.items.table.table import TableItem
+from docling_core.types.doc.items.text import TextItem
 from docling_core.types.doc.labels import DocItemLabel
 
 from docintel.ingest.models import (

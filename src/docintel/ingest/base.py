@@ -5,6 +5,7 @@ from docintel.ingest.models import Document
 
 
 class Parser(Protocol):
-    name: str
+    @property
+    def name(self) -> str: ...
 
     def parse(self, path: Path) -> Document: ...

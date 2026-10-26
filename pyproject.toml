@@ -18,6 +18,7 @@ docintel = "docintel:main"
 docintel-parse = "docintel.ingest.cli:main"
 docintel-golden = "docintel.ingest.golden:main"
 docintel-eval = "docintel.eval.report:main"
+docintel-oracle = "docintel.eval.oracle_report:main"
 
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
