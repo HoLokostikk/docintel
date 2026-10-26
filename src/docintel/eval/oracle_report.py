@@ -42,7 +42,10 @@ def mutate(grid: list[list[str]], kind: str, cell: tuple[int, int]) -> list[list
 
 
 def describe_tables() -> None:
-    header = f"{'gold_id':26} {'kind':10} {'cols':>5} {'relations':>10} {'coverage':>9} {'violations':>11}"
+    header = (
+        f"{'gold_id':26} {'kind':10} {'cols':>5} {'relations':>10} "
+        f"{'coverage':>9} {'violations':>11}"
+    )
     print(header)
     print("-" * len(header))
 
